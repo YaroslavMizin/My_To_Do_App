@@ -99,4 +99,8 @@ body section .list .task button:hover {
   background-color: #daa514;
 }
 
+#root {
+  margin: 10px;
+}
+
 /*# sourceMappingURL=styles.css.map */
