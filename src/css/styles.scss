@@ -33,7 +33,9 @@ body {
 
     section {
         margin: auto;
-
+        #root {
+            margin: 10px;
+        }
         p {
             color: #303030;
             text-shadow: 1px 1px 20px rgb(182, 31, 182);
