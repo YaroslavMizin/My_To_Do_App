@@ -1,0 +1,102 @@
+body {
+  font-family: sans-serif;
+  background: linear-gradient(90deg, rgb(182, 31, 182), rgb(99, 206, 200));
+}
+body section {
+  margin: auto;
+}
+body section p {
+  color: #303030;
+  text-shadow: 1px 1px 20px rgb(182, 31, 182);
+  text-transform: uppercase;
+  text-align: center;
+  width: 500px;
+  margin: auto;
+  padding: 20px 0;
+  font-weight: bold;
+  border: 3px solid #daa514;
+  background: linear-gradient(#d1d17f, #da9b14);
+  margin: auto;
+  width: 500px;
+}
+body section .navigation {
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid #daa514;
+  background: linear-gradient(#d1d17f, #da9b14);
+  margin: auto;
+  width: 500px;
+}
+body section .navigation input {
+  width: 60%;
+  height: 20px;
+  border: 3px solid #daa514;
+  border-radius: 8px;
+  font-family: sans-serif;
+  outline: 0;
+  margin: 10px;
+}
+body section .navigation button {
+  width: 30%;
+  transition: 0.5s;
+  color: antiquewhite;
+  cursor: pointer;
+  border: 3px solid #daa514;
+  border-radius: 8px;
+  font-family: sans-serif;
+  outline: 0;
+  margin: 10px;
+  background: linear-gradient(90deg, rgb(182, 31, 182), rgb(99, 206, 200));
+}
+body section .navigation button:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 10px #d1d17f;
+  background-color: #daa514;
+}
+body section .list {
+  min-height: 500px;
+  height: fit-content;
+  border: 3px solid #daa514;
+  background: linear-gradient(#d1d17f, #da9b14);
+  margin: auto;
+  width: 500px;
+}
+body section .list .task {
+  width: 90%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  border: 3px solid #daa514;
+  background: linear-gradient(90deg, rgb(182, 31, 182), rgb(99, 206, 200));
+  color: antiquewhite;
+}
+body section .list .task .task_description {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+body section .list .task .checkbox {
+  width: 18px;
+  height: 18px;
+  position: relative;
+}
+body section .list .task div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
+}
+body section .list .task button {
+  background: linear-gradient(#d1d17f, #da9b14);
+  border: 3px solid #daa514;
+  color: #303030;
+  transition: 0.5s;
+  font-family: sans-serif;
+}
+body section .list .task button:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 10px #d1d17f;
+  background-color: #daa514;
+}
+
+/*# sourceMappingURL=styles.css.map */

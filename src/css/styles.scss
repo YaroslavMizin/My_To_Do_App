@@ -1,0 +1,162 @@
+$background: linear-gradient(#d1d17f, #da9b14);
+$border: 3px solid #daa514;
+$shadow: 2px 2px 10px #d1d17f;
+
+@mixin common {
+    border: $border;
+    background: $background;
+    margin: auto;
+    width: 500px;
+}
+
+@mixin form {
+    border: $border;
+    border-radius: 8px;
+    font-family: sans-serif;
+    outline: 0;
+    margin: 10px
+}
+
+@mixin element_background {
+    background: linear-gradient(90deg, rgb(182, 31, 182), rgb(99, 206, 200));
+}
+
+@mixin hover {
+    transform: scale(1.05);
+    box-shadow: $shadow;
+    background-color: #daa514;
+}
+
+body {
+    font-family: sans-serif;
+    @include element_background;
+
+    section {
+        margin: auto;
+
+        p {
+            color: #303030;
+            text-shadow: 1px 1px 20px rgb(182, 31, 182);
+            text-transform: uppercase;
+            text-align: center;
+            width: 500px;
+            margin: auto;
+            padding: 20px 0;
+            font-weight: bold;
+            @include common;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            @include common;
+
+            input {
+                width: 60%;
+                height: 20px;
+                padding: 0 10px;
+                @include form;
+            }
+
+            button {
+                width: 30%;
+                transition: 0.5s;
+                color: antiquewhite;
+                cursor: pointer;
+                @include form;
+                @include element_background;
+                &:hover {
+                    @include hover;
+                }
+            }
+        }
+
+        .list {
+            height: fit-content;
+            @include common;
+
+            .task {
+                position: relative;
+                width: 90%;
+                padding: 10px;
+                margin: 10px;
+                border-radius: 8px;
+                border: $border;
+                @include element_background;
+                
+                .task_description {
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                } .task_text {
+                    color: antiquewhite;
+                    font-family: sans-serif;
+                    overflow-x: hidden;
+                    width: 70%;
+                }
+                .checkbox {
+                    width: 18px;
+                    height: 18px;
+                    position: relative;
+                    cursor: pointer;
+                }
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 25%;
+                }
+                
+                button {
+                    background: $background;
+                    border: $border;
+                    color: rgb(182, 31, 182);
+                    transition: 0.5s;
+                    font-family: sans-serif;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    &:hover {
+                        @include hover;
+                    }
+                }
+
+                .time_and_comment {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                }
+                .task_time {
+                    font-size: 12px;
+                    color:rgb(182, 31, 182)
+                }
+                
+                .comment {
+                    width: 68%;
+                    height: 15px;
+                    resize: none;
+                    background: transparent;
+                    color:antiquewhite;
+                    outline: 0;
+                    border: 1px solid #daa514;
+                    &::placeholder {
+                        color: antiquewhite;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:501px) {
+    body section p, body section .navigation, body section .list {
+        width: 100%;
+    }
+
+    body section .list .task .task_time {
+        font-size: 9px;
+    }
+
+    body section .list .task div {
+        width: auto;
+    }
+}
